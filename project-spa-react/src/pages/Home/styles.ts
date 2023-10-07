@@ -69,6 +69,9 @@ export const CounterdownContainer = styled.div`
     line-height: 8rem;
     color: ${props => props.theme["gray-100"]} ;
 
+
+    
+
     display: flex;
     gap: 1rem;
 
@@ -109,6 +112,33 @@ export const StartCountDownButton = styled.button`
 
     &:not(:disabled):hover{
         color: ${props => props.theme["green-700"]} ;
+    }
+
+    &:disabled{
+        opacity: .7;
+        cursor: not-allowed;
+    }
+
+
+`
+export const StopCountDownButton = styled.button`
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-weight: bold;
+
+
+    background: ${props => props.theme["red-500"]} ;
+    color: ${props => props.theme["gray-100"]} ;
+
+    &:not(:disabled):hover{
+        color: ${props => props.theme["red-700"]} ;
     }
 
     &:disabled{
