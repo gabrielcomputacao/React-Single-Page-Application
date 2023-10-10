@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, /*  useReducer, */ useState } from "react";
 
 interface CreateCylceData {
   task: string;
@@ -32,6 +32,9 @@ interface CyclesChildrenProps {
 
 export function CyclesContextProvider({ children }: CyclesChildrenProps) {
   const [cycles, setCycles] = useState<Cycle[]>([]);
+  // const [cycles, setCycles] = useReducer((state: Cycle[], action: any) => {
+  //   return state;
+  // }, []);
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null);
 
   const [amuontSecondsPassed, setAmuontSecondsPassed] = useState(0);
